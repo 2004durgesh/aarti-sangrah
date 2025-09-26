@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { Card } from "fumadocs-ui/components/card";
 
 interface AartiBlockProps {
   children: string;
@@ -8,10 +9,9 @@ interface AartiBlockProps {
 
 function AartiBlock({ children, className, ...props }: AartiBlockProps) {
   return (
-    <div
+    <Card
+      title=""
       className={cn(
-        "flex flex-1 flex-col",
-        "bg-card text-card-foreground",
         "border border-border rounded-md p-4",
         "shadow-sm",
         className
@@ -23,7 +23,7 @@ function AartiBlock({ children, className, ...props }: AartiBlockProps) {
           {children}
         </p>
       </div>
-    </div>
+    </Card>
   );
 }
 
